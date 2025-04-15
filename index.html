@@ -20,6 +20,12 @@
       text-align: center;
     }
 
+    header img {
+      max-height: 50px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
     .tagline {
       font-size: 1.2em;
       color: #d8c7b3;
@@ -84,6 +90,15 @@
       color: white;
     }
 
+    footer a {
+      color: #ffdfae;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
     #soulline {
       background-color: #fff0f0;
       border-left: 5px solid #e04747;
@@ -102,7 +117,9 @@
   </style>
 </head>
 <body>
+
   <header>
+    <img src="SC.png" alt="Senctuate Logo">
     <h1>The Senctuate Circle</h1>
     <p class="tagline">Healing. Return. Sacred Community.</p>
   </header>
@@ -117,7 +134,7 @@
     <h2>Spiritual Healing Circles</h2>
     <div class="circle">
       <h3>Substance Recovery Circle</h3>
-      <p>Coming soon:Join weekly online sessions for spiritual-based addiction recovery. No judgment. Just truth, presence, and power.</p>
+      <p>Join weekly online sessions for spiritual-based addiction recovery. No judgment. Just truth, presence, and power.</p>
     </div>
     <div class="circle">
       <h3>Redemption & Reentry Circle</h3>
@@ -144,6 +161,25 @@
       <textarea placeholder="Leave a comment..."></textarea>
       <button>Post Comment</button>
     </article>
+
+    <!-- Disqus Comment Section -->
+    <div id="disqus_thread" style="margin-top: 40px;"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = document.title;
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://circles.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the 
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
   </section>
 
   <section id="merch">
@@ -159,10 +195,18 @@
       <textarea placeholder="Your message or healing request..." required></textarea>
       <button type="submit">Send Message</button>
     </form>
+
+    <!-- Elfsight Contact Integration -->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
+    <div class="elfsight-app-a225d3dc-e793-4621-a196-d47368a4b0d0" data-elfsight-app-lazy></div>
   </section>
 
   <footer>
     <p>&copy; 2025 The Senctuate Circle. Rooted in Spirit. Realized in Love.</p>
+    <p>Follow us on TikTok: 
+      <a href="https://www.tiktok.com/@Senctuate" target="_blank">@Senctuate</a>
+    </p>
   </footer>
+
 </body>
 </html>
